@@ -1,0 +1,19 @@
+E4: What is the Internet?
+1. URL is called (this is a domain) 
+2. client request is made to the server 
+3. directed to an IP address (location of computer in the farm that is processing your request)
+4. server response returns content of the web page 
+
+
+1. What is a request? - asking for something (client - your computer - asks for information (an HTML page or the like) from a server when you call a url
+2. What is making the request? - client (your computer by entering a URL)
+3. Where does the request go (like physically, on Earth, as well as conceptually, on the internet)? What's its "address"? - the request goes to a server which is typically a computer in a computer farm whose physical location/address is represented by an IP 
+4. What happens to the request when it gets "there"? - when the request gets “there”, it is sent to a particular computer which is assigned via IP address and then it requests web page data which is returned via a server response 
+5. What comes back? What is it? What data does it contain?
+What happens when it comes back? - what comes back is a server response aka the data in html/whatever form of the webpage you wanted to access so now you see the page 
+
+E5: Ruby Rocks 
+1. What shows up on the screen? - Error 404
+2. What does it mean? - client is not authenticated (private repository —> cannot access)
+3. Why is the error it displays that particular number? - because each number means something and in this case the client request is not authenticated to access the repository
+4. Does this in fact mean that Ruby does not rock? - nope just that I cannot see that Ruby does not rock 

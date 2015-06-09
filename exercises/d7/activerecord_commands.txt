@@ -1,0 +1,46 @@
+1. Create a User with a name and followers count
+	User.create(name: “Rosalie”, followers: 5000000)
+2. Find it with User.find. Assign the result to the variable user
+	User.find(:id)
+3. Find it by name with User.find_by
+	User.find_by(name: “Rosalie”)
+4. Write a command that finds all the users with followers count equal to 10.
+	User.where(followers: 10)
+5. Update user from step 2 to have a different name. Make sure to save!
+	user = User.find(:id)
+	user.update_attributes(name: “Rose”)
+6. Create a Tweet for this user. Assign the correct user_id, and make sure to save.
+	Tweet.create(user_id: 1, body: “Enter Tweet Here”)
+7. Update the tweet from step 6 to have a different body.
+	tweet = Tweet.find_by(body: “Enter Tweet Here”) 
+	tweet.update_attributes(body: “Tweet goes here”)
+8. Destroy it.
+	tweet.destroy
+
+
+1. Create 10 users programmatically, each with a different name. Use a loop—you might want to write pseudo-code first!
+users = [“Jill”, “Larry”, … ]
+users.each do |user|
+	User.create(name: user) 
+end 
+2. Destroy them all
+users.each do |user| 
+	to_delete = User.find_by(name: user)
+	to_delete.destroy 
+end
+
+OR 
+
+User.destroy_all 
+
+3. Create 10 tweets in a similar way.
+tweets = [“tweet1”, “tweet2”, “tweet3”,…]
+tweets.each do |tweet|
+	Tweet.create(body: tweet)
+end 
+
+4. Update all of them to have the body "Ruby is fat"
+Tweet.all.update_attributes(body: “Ruby is fat”) 
+
+5. Update the fourth one to say "Ruby is getting even fatter"
+Tweet.find(4).update_attributes(body: “Ruby is getting even fatter”)

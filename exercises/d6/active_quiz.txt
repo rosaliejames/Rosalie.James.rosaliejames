@@ -1,0 +1,7 @@
+E1:
+1. What is a database? - a database is a collection of information that is organized so that it can easily be accessed, managed, and updated
+2. What is a database table? How does it relate to a database? What's a good analogy for a database table (i.e. a way to visualize it)? - a databased table is a collection of related data held in a structure format within a database consisting of fields (columns) and rows. 
+3. Draw the tweets database table
+4. Why do we use models/resources at all?- to help us design our applications before we start to avoid the need to rewrite and abandon code 
+5. What is ActiveRecord? - The M in MVC which stands for Model - responsible for representing data and logic. It is an approach to accessing data in a database
+6. What's the difference between a database table, resource and an ActiveRecord model? - an active record model is an approach to accessing data in a database 

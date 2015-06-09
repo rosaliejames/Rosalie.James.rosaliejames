@@ -1,0 +1,91 @@
+Views: 
+-login 
+-settings
+-search 
+-cart 
+-account 
+-checkout 
+-item view 
+
+Data: 
+Item 
+name:str 
+vendor:str
+in_stock:boolean
+price:float 
+reviews:[str]
+
+Shopping Cart 
+items: [item] 
+total: float 
+
+User 
+name: str 
+email: str 
+
+Account 
+billing address: str 
+shipping address: str 
+payment_type: str 
+credit_card_no: int 
+order_hist: [order]
+
+
+Order 
+order_number: int
+items: [item] 
+total: float 
+status: str
+
+Methods: 
+Item 
+.add_to_cart 
+.remove_from_cart 
+.view (“R”)
+
+Shopping Cart 
+.empty (“D”)
+.check_out 
+.view (“R”) 
+.edit (“U”) 
+
+User 
+.create (“C”) 
+.view (“R”)
+.edit (“U”)
+.delete (“D”)
+
+Account 
+.create 
+.view 
+.edit
+.delete
+
+Order 
+.create
+.view 
+.delete
+
+Models: 
+User 
+Account 
+Item 
+Shopping Cart 
+Order
+
+Model: 
+A user has an account and an account belongs to a user (1-1) **combine**
+A shopping cart belongs to a user and a user has a shopping cart (1-1) 
+A shopping cart has items and items belong to shopping carts (many-many) 
+A user-account has orders and an order belongs to a user-account (many orders - 1 account)
+An order has items and an item belongs to an order (many-many) 
+
+See Notebook for diagrams and tables
+
+|UserAcount| (1) —— (1) |Shopping Cart|
+     (1)                     (many)
+      |                        |
+   (many)                    (many)
+  |Order|(many) —————- (many)|Item|
+
+

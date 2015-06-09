@@ -1,0 +1,12 @@
+.all - class method, returns all intances of this class
+.first - class method, returns the first instance of this class 
+.new - class method, returns a new instance of the class that has not yet been saved to the relevant data base
+.find - class method, searches by ID, returns ONE instance of the class
+.find_by - class method, returns the first record matching the specified conditions
+.where - class method, searches for a record that matches the specified conditions, returns a relation (behaves like an array) of all records matching the specified condition(s), if none are found it returns an empty relation
+.save - instance method called on a record - if it is new it saves a new instance of it in the database, if it already exists it updates it in the database
+.update_attributes - instance method, updates all user attributes specified 
+.destroy - class method, called on the class, deletes attributes identified by id 
+
+What's the difference between .find and .find_by? - .find searches by id, .find_by searches by a specified attribute and only returns the first one
+What's the difference between .where and .find_by? - .where returns a relation of all the records matching the conditions whereas .find_by only returns one 
